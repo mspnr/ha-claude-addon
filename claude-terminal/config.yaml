@@ -45,7 +45,12 @@ schema:
 
 # Volume mappings for file access
 map:
-  - config:rw    # Access to Home Assistant configuration files
+  - type: homeassistant_config # Access to Home Assistant configuration files
+    read_only: false
+    path: /config
+  - type: all_addon_configs # Access to configs of other addons
+    read_only: false
+    path: /addon_configs
 
 # API access for Home Assistant integration
 hassio_api: true
