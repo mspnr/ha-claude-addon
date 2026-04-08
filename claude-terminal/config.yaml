@@ -51,6 +51,8 @@ map:
   - type: all_addon_configs # Access to configs of other addons
     read_only: false
     path: /addon_configs
+  - type: share
+    read_only: false
 
 # API access for Home Assistant integration
 hassio_api: true
